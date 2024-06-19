@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "aprendiendoObjetos/1.0.0": {
+        "runtime": {
+          "aprendiendoObjetos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "aprendiendoObjetos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
