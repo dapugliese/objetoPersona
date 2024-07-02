@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/aprendiendoObjetos/aprendiendoObjetos.csproj": {}
+    "/home/et12alumno/miclase/objetoPersona/aprendiendoObjetos.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/aprendiendoObjetos/aprendiendoObjetos.csproj": {
+    "/home/et12alumno/miclase/objetoPersona/aprendiendoObjetos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/aprendiendoObjetos/aprendiendoObjetos.csproj",
+        "projectUniqueName": "/home/et12alumno/miclase/objetoPersona/aprendiendoObjetos.csproj",
         "projectName": "aprendiendoObjetos",
-        "projectPath": "/home/et12alumno/aprendiendoObjetos/aprendiendoObjetos.csproj",
+        "projectPath": "/home/et12alumno/miclase/objetoPersona/aprendiendoObjetos.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/aprendiendoObjetos/obj/",
+        "outputPath": "/home/et12alumno/miclase/objetoPersona/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"

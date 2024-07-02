@@ -3,18 +3,21 @@ namespace libreriaClase{
     class Persona
     {
 
-        private string nombre;
+//        private string nombre;
+
+
         public string Nombre {get;set;}
 
         private string fechaNacimiento;
         public string FechaNacimiento {get;set;}
         private int dni;
+
         public int DNI {get;set;}
 
        
 
         public  Persona(string rNombre, string rFechaNacimiento, int rDni){
-            nombre = rNombre;
+            Nombre = rNombre;
             fechaNacimiento = rFechaNacimiento;
             dni = rDni;
 
@@ -31,8 +34,12 @@ namespace libreriaClase{
 
         public void mostrarPersona(){
             Console.WriteLine("Nombre: {0}", Nombre);
-            Console.WriteLine("Fecha Nacimiento: {0}", FechaNacimiento);
-            Console.WriteLine("DNI: {0}", DNI);
+            Console.WriteLine("Fecha Nacimiento: {0}", this.fechaNacimiento);
+            Console.WriteLine("DNI: {0}", this.dni);
+        }
+
+        public void devolverEdad(){
+            Console.WriteLine("La edad es:.....");
         }
 
     }
@@ -48,6 +55,10 @@ namespace libreriaClase{
 
         public void estudiar(){
             Console.WriteLine("Estudiando....");
+        }
+
+        public void devolverCurso(){
+            Console.WriteLine("El curso es: {0}", this.curso);
         }
     }
 
