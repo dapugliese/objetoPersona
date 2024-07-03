@@ -40,8 +40,19 @@ namespace libreria
             Console.WriteLine("Ingreso de Personas");
             Console.WriteLine("-------------------");
             Console.WriteLine("");
+
+            Console.Write("Ingrese Apellido: ");
+            p1.Apellido = Console.ReadLine();
+
             Console.Write("Ingrese Nombre: ");
             p1.Nombre = Console.ReadLine();
+
+            Console.Write("Ingrese DNI: ");
+            p1.DNI = Convert.ToInt32(Console.ReadLine());            
+            
+
+            Console.Write("Ingrese Fecha Nacimiento: ");
+            p1.FechaNacimiento = Console.ReadLine();
 
         }
     }
