@@ -9,16 +9,43 @@ namespace libreria
 
         static void Main(){
 
+            string opcion;
 
-            Persona p1 = new Persona("Diego","1/1/1",5666544);
-            
-            Alumno a1 = new Alumno();
-            a1.Nombre = "Juan";
+            Console.WriteLine("Menú");
+            Console.WriteLine("-----");
 
-            a1.devolverCurso();
-            a1.devolverEdad();
+            Console.WriteLine("");
+            Console.WriteLine("1.- Crear Alumno");
+            Console.WriteLine("");
+            Console.Write("Elija una opción: ");
+
+            opcion = Console.ReadLine();
+
+            if (opcion == "1"){
+
+                crearPersona();
+            } 
+            else
+            {
+                Console.WriteLine("Opción Incorrecta...");
+            }
+
+        }
+
+         public static void crearPersona(){
+
+            Console.Clear();
+            Persona p1 = new Persona();
+
+            Console.WriteLine("Ingreso de Personas");
+            Console.WriteLine("-------------------");
+            Console.WriteLine("");
+            Console.Write("Ingrese Nombre: ");
+            p1.Nombre = Console.ReadLine();
 
         }
     }
+
+
     
 }

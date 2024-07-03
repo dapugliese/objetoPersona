@@ -6,20 +6,19 @@ namespace libreriaClase{
 //        private string nombre;
 
 
+        public string Apellido {get;set;}
         public string Nombre {get;set;}
-
-        private string fechaNacimiento;
-        public string FechaNacimiento {get;set;}
-        private int dni;
-
         public int DNI {get;set;}
+        public string FechaNacimiento {get;set;}
+
 
        
 
-        public  Persona(string rNombre, string rFechaNacimiento, int rDni){
+        public  Persona(string rApellido,string rNombre, string rFechaNacimiento, int rDni){
+            Apellido = rApellido;
             Nombre = rNombre;
-            fechaNacimiento = rFechaNacimiento;
-            dni = rDni;
+            FechaNacimiento = rFechaNacimiento;
+            DNI = rDni;
 
         }
 
@@ -33,9 +32,10 @@ namespace libreriaClase{
         }
 
         public void mostrarPersona(){
+            Console.WriteLine("Apellido: {0}", Apellido);
             Console.WriteLine("Nombre: {0}", Nombre);
-            Console.WriteLine("Fecha Nacimiento: {0}", this.fechaNacimiento);
-            Console.WriteLine("DNI: {0}", this.dni);
+            Console.WriteLine("Fecha Nacimiento: {0}", FechaNacimiento);
+            Console.WriteLine("DNI: {0}", DNI);
         }
 
         public void devolverEdad(){
