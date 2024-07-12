@@ -6,20 +6,11 @@ namespace libreria
 {
 
     class Pricipal{
-
         static void Main(){
 
-            string opcion;
+            string opcion = mostrarMenu();
 
-            Console.WriteLine("Menú");
-            Console.WriteLine("-----");
-
-            Console.WriteLine("");
-            Console.WriteLine("1.- Crear Alumno");
-            Console.WriteLine("");
-            Console.Write("Elija una opción: ");
-
-            opcion = Console.ReadLine();
+            while ( opcion != "9") {
 
             if (opcion == "1"){
 
@@ -28,6 +19,11 @@ namespace libreria
             else
             {
                 Console.WriteLine("Opción Incorrecta...");
+                Console.ReadKey();
+            }
+
+            opcion = mostrarMenu();
+
             }
 
         }
@@ -53,6 +49,28 @@ namespace libreria
 
             Console.Write("Ingrese Fecha Nacimiento: ");
             p1.FechaNacimiento = Console.ReadLine();
+
+        }
+
+
+        public static string mostrarMenu(){
+
+            string opcion;
+
+            Console.Clear();
+
+            Console.WriteLine("Menú");
+            Console.WriteLine("-----");
+
+            Console.WriteLine("");
+            Console.WriteLine("1.- Crear Alumno");
+            Console.WriteLine("");
+            Console.Write("Elija una opción: ");
+
+            opcion = Console.ReadLine();
+
+            return opcion;
+
 
         }
     }
