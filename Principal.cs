@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Security.AccessControl;
+using System.Collections.Generic;  //librería de LIST
 using libreriaClase;
 
 namespace libreria
 {
 
     class Pricipal{
+
+        
+
         static void Main(){
+
+            List<Persona> listaPersona = new List<Persona>();
 
             string opcion = mostrarMenu();
 
@@ -14,8 +20,15 @@ namespace libreria
 
             if (opcion == "1"){
 
-                crearPersona();
+                listaPersona.Add(crearPersona());
+                
             } 
+
+            if (opcion == "2"){
+
+                mostrarPersona(listaPersona);
+                
+            }             
             else
             {
                 Console.WriteLine("Opción Incorrecta...");
@@ -28,7 +41,7 @@ namespace libreria
 
         }
 
-         public static void crearPersona(){
+         public static Persona crearPersona(){
 
             Console.Clear();
             Persona p1 = new Persona();
@@ -50,6 +63,14 @@ namespace libreria
             Console.Write("Ingrese Fecha Nacimiento: ");
             p1.FechaNacimiento = Console.ReadLine();
 
+            return p1;
+
+        }
+
+        public static void mostrarPersona(List<Persona> personas){
+                foreach(var elem in personas){
+                    Console.WriteLine(elem.Apellido);
+                }
         }
 
 
@@ -64,6 +85,8 @@ namespace libreria
 
             Console.WriteLine("");
             Console.WriteLine("1.- Crear Alumno");
+            Console.WriteLine("2.- Mostrar Alumnos");
+
             Console.WriteLine("");
             Console.Write("Elija una opción: ");
 
