@@ -18,22 +18,20 @@ namespace libreria
 
             while ( opcion != "9") {
 
-            if (opcion == "1"){
 
-                listaPersona.Add(crearPersona());
-                
-            } 
-
-            if (opcion == "2"){
-
-                mostrarPersona(listaPersona);
-                
-            }             
-            else
-            {
-                Console.WriteLine("Opción Incorrecta...");
-                Console.ReadKey();
-            }
+                switch(opcion) 
+                            {
+                            case "1":
+                                listaPersona.Add(crearPersona());
+                                break;
+                            case "2":
+                                mostrarPersona(listaPersona);
+                                break;
+                            default:
+                                Console.WriteLine("Opción Incorrecta...");
+                                Console.ReadKey();
+                                break;
+                            }
 
             opcion = mostrarMenu();
 
@@ -68,9 +66,20 @@ namespace libreria
         }
 
         public static void mostrarPersona(List<Persona> personas){
+                Console.Clear();
                 foreach(var elem in personas){
+                    
+                    Console.Write("Apellido: ");
                     Console.WriteLine(elem.Apellido);
+                    Console.Write("Nombre: ");
+                    Console.WriteLine(elem.Nombre);
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("----------------");
+
+                    
                 }
+                Console.ReadKey();
         }
 
 
