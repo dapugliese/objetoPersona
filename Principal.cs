@@ -27,6 +27,10 @@ namespace libreria
                             case "2":
                                 mostrarPersona(listaPersona);
                                 break;
+                            case "3":
+                                buscarPersona(listaPersona);
+                                break;
+
                             default:
                                 Console.WriteLine("Opción Incorrecta...");
                                 Console.ReadKey();
@@ -82,6 +86,43 @@ namespace libreria
                 Console.ReadKey();
         }
 
+    public static void buscarPersona(List<Persona> personas){
+                int dni;
+                int flag=0;
+                Console.Clear();
+                Console.Write("Ingrese DNI Persona a buscar: ");
+                dni = Convert.ToInt32(Console.ReadLine());
+
+                foreach(var elem in personas){
+
+                    if ( elem.DNI == dni ){
+
+                        Console.Write("Apellido: ");
+                        Console.WriteLine(elem.Apellido);
+                        Console.Write("Nombre: ");
+                        Console.WriteLine(elem.Nombre);
+                        Console.Write("DNI:");
+                        Console.WriteLine(elem.DNI);
+                        Console.Write("Fecha Nacimiento:");
+                        Console.WriteLine(elem.FechaNacimiento);
+                        Console.WriteLine("----------------");
+
+                        Console.ReadKey();
+                        flag = 1;
+
+                    }
+
+                }
+                if (flag == 0){
+                    Console.WriteLine("Registro No Encontrado");
+                    Console.ReadKey();
+                }
+                
+
+
+
+
+    }
 
         public static string mostrarMenu(){
 
@@ -95,6 +136,7 @@ namespace libreria
             Console.WriteLine("");
             Console.WriteLine("1.- Crear Alumno");
             Console.WriteLine("2.- Mostrar Alumnos");
+            Console.WriteLine("3.- Buscar Alumno");
 
             Console.WriteLine("");
             Console.Write("Elija una opción: ");
