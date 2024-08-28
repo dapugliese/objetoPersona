@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/1308/objetoPersona/aprendiendoObjetos.csproj": {}
+    "/home/et12alumno/27082024/objetoPersona/aprendiendoObjetos.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/1308/objetoPersona/aprendiendoObjetos.csproj": {
+    "/home/et12alumno/27082024/objetoPersona/aprendiendoObjetos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/1308/objetoPersona/aprendiendoObjetos.csproj",
+        "projectUniqueName": "/home/et12alumno/27082024/objetoPersona/aprendiendoObjetos.csproj",
         "projectName": "aprendiendoObjetos",
-        "projectPath": "/home/et12alumno/1308/objetoPersona/aprendiendoObjetos.csproj",
+        "projectPath": "/home/et12alumno/27082024/objetoPersona/aprendiendoObjetos.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/1308/objetoPersona/obj/",
+        "outputPath": "/home/et12alumno/27082024/objetoPersona/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

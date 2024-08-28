@@ -1,5 +1,7 @@
-namespace libreriaClase{
+using MySql.Data.MySqlClient;
+using System.Data;
 
+namespace libreriaClase{
     class Persona
     {
 
@@ -44,7 +46,6 @@ namespace libreriaClase{
 
     }
 
-
     class Alumno : Persona {
 
         private int legajo;
@@ -62,4 +63,25 @@ namespace libreriaClase{
         }
     }
 
+    class conexionBD{
+
+        MySqlConnection Conector; 
+        MySqlCommand Comando;
+
+        public void conectar(){
+
+            Conector = new MySqlConnection(@"server=127.0.0.1; database=5to_Escuela; Uid=5to_agbd; pwd=Trigg3rs!");
+            Comando = Conector.CreateCommand();
+
+        }
+
+        public void insertarBD(){
+
+                Comando.CommandText = "insert into Persona (DNI,Apellido,Nombre,FechaNacimiento)  values (1233246,'Sanchez','Miguel','21/05/2015')";
+                Comando.CommandType = CommandType.Text;
+                Conector.Open();
+                Comando.ExecuteNonQuery();            
+
+        }
+    }
 }
