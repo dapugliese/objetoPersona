@@ -31,6 +31,10 @@ namespace libreria
                                 buscarPersona(listaPersona);
                                 break;
 
+                            case "4":
+                                insertarPersona();
+                                break;
+
                             default:
                                 Console.WriteLine("Opción Incorrecta...");
                                 Console.ReadKey();
@@ -124,6 +128,15 @@ namespace libreria
 
     }
 
+        public static void insertarPersona(){
+
+            conexionBD con  = new conexionBD();
+
+            con.conectar();
+            con.insertarBD();
+
+
+        }
         public static string mostrarMenu(){
 
             string opcion;
@@ -137,6 +150,7 @@ namespace libreria
             Console.WriteLine("1.- Crear Alumno");
             Console.WriteLine("2.- Mostrar Alumnos");
             Console.WriteLine("3.- Buscar Alumno");
+            Console.WriteLine("4.- Prueba Insertar Dato en BD");
 
             Console.WriteLine("");
             Console.Write("Elija una opción: ");
