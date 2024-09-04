@@ -1612,11 +1612,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/et12alumno/29082024/objetoPersona/aprendiendoObjetos.csproj",
+      "projectUniqueName": "/home/et12alumno/03092024/objetoPersona/aprendiendoObjetos.csproj",
       "projectName": "aprendiendoObjetos",
-      "projectPath": "/home/et12alumno/29082024/objetoPersona/aprendiendoObjetos.csproj",
+      "projectPath": "/home/et12alumno/03092024/objetoPersona/aprendiendoObjetos.csproj",
       "packagesPath": "/home/et12alumno/.nuget/packages/",
-      "outputPath": "/home/et12alumno/29082024/objetoPersona/obj/",
+      "outputPath": "/home/et12alumno/03092024/objetoPersona/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/et12alumno/.nuget/NuGet/NuGet.Config"

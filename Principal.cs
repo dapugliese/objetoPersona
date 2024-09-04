@@ -32,7 +32,7 @@ namespace libreria
                                 break;
 
                             case "4":
-                                insertarPersona();
+                                insertarPersona(listaPersona);
                                 break;
 
                             default:
@@ -81,8 +81,10 @@ namespace libreria
                     Console.WriteLine(elem.Apellido);
                     Console.Write("Nombre: ");
                     Console.WriteLine(elem.Nombre);
-                    Console.WriteLine("");
-                    Console.WriteLine("");
+                    Console.Write("DNI:");
+                    Console.WriteLine(elem.DNI);
+                    Console.Write("Fecha Nacimiento:");
+                    Console.WriteLine(elem.FechaNacimiento);
                     Console.WriteLine("----------------");
 
                     
@@ -128,12 +130,20 @@ namespace libreria
 
     }
 
-        public static void insertarPersona(){
+        public static void insertarPersona(List<Persona> rlistaPersona){
 
             conexionBD con  = new conexionBD();
 
             con.conectar();
-            con.insertarBD();
+
+            foreach(var p in rlistaPersona){
+
+                con.insertarBD(p);
+            }
+
+            Console.WriteLine("Registros Insertados....");
+            Console.WriteLine("Presione una tecla para continuar....");
+            Console.ReadKey();
 
 
         }
@@ -150,7 +160,7 @@ namespace libreria
             Console.WriteLine("1.- Crear Alumno");
             Console.WriteLine("2.- Mostrar Alumnos");
             Console.WriteLine("3.- Buscar Alumno");
-            Console.WriteLine("4.- Prueba Insertar Dato en BD");
+            Console.WriteLine("4.- Exportar Alumnos a BD");
 
             Console.WriteLine("");
             Console.Write("Elija una opción: ");

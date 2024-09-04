@@ -75,12 +75,14 @@ namespace libreriaClase{
 
         }
 
-        public void insertarBD(){
+        public void insertarBD(Persona rPersona){
 
-                Comando.CommandText = "insert into Persona (DNI,Apellido,Nombre,FechaNacimiento)  values (1233246,'Sanchez','Miguel','21/05/2015')";
+                Comando.CommandText = "insert into Persona (DNI,Apellido,Nombre,FechaNacimiento)  values ('" + rPersona.DNI + "', '" + rPersona.Apellido + "','" + rPersona.Nombre + "','" + rPersona.FechaNacimiento + "')";
+
                 Comando.CommandType = CommandType.Text;
                 Conector.Open();
-                Comando.ExecuteNonQuery();            
+                Comando.ExecuteNonQuery();    
+                Conector.Close();        
 
         }
     }
