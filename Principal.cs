@@ -2,6 +2,7 @@
 using System.Security.AccessControl;
 using System.Collections.Generic;  //librería de LIST
 using libreriaClase;
+using System.Security.Cryptography.X509Certificates;
 
 namespace libreria
 {
@@ -33,6 +34,9 @@ namespace libreria
 
                             case "4":
                                 insertarPersona(listaPersona);
+                                break;
+                            case "5":
+                                contarNombrePersonas();
                                 break;
 
                             default:
@@ -113,6 +117,8 @@ namespace libreria
                         Console.WriteLine(elem.FechaNacimiento);
                         Console.WriteLine("----------------");
 
+                        
+
                         Console.ReadKey();
                         flag = 1;
 
@@ -145,6 +151,24 @@ namespace libreria
             Console.WriteLine("Presione una tecla para continuar....");
             Console.ReadKey();
 
+        }
+        public static void contarNombrePersonas(){
+
+            conexionBD con  = new conexionBD();
+
+            con.conectar();
+        
+
+            string nombre;
+
+            Console.Clear();
+            Console.Write("Ingrese Nombre: ");
+            nombre = Console.ReadLine();
+
+            Console.WriteLine("");
+            Console.WriteLine("El nombre ingresado existe {0} Veces.", con.countPersonNameBD(nombre));
+            Console.WriteLine("Presione una tecla para continuar....");
+            Console.ReadKey();        
 
         }
         public static string mostrarMenu(){
@@ -161,6 +185,9 @@ namespace libreria
             Console.WriteLine("2.- Mostrar Alumnos");
             Console.WriteLine("3.- Buscar Alumno");
             Console.WriteLine("4.- Exportar Alumnos a BD");
+            Console.WriteLine("5.- Contar la cantidad de....");
+
+            
 
             Console.WriteLine("");
             Console.Write("Elija una opción: ");
