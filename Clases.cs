@@ -101,5 +101,23 @@ namespace libreriaClase{
                 return cantidadObjeto;
 
         }
+
+        public void mostrarAlumnos(){
+
+            string sql = "select DNI, Apellido, Nombre from Persona where Apellido = 'Sanchez'";
+
+            Comando.CommandText = sql;
+            Conector.Open();
+            MySqlDataReader  datos =  Comando.ExecuteReader();
+
+            while (datos.Read()){
+                Console.WriteLine(datos[0]+" -- "+datos[1]);
+            }
+            datos.Close();
+
+            
+
+
+        }
     }
 }

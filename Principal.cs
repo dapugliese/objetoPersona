@@ -39,6 +39,11 @@ namespace libreria
                                 contarNombrePersonas();
                                 break;
 
+                            case "6":
+                                mostrarAlumnosBD();
+                                break;
+
+
                             default:
                                 Console.WriteLine("Opción Incorrecta...");
                                 Console.ReadKey();
@@ -171,6 +176,20 @@ namespace libreria
             Console.ReadKey();        
 
         }
+
+        public static void mostrarAlumnosBD(){
+
+            conexionBD con  = new conexionBD();
+            con.conectar();
+            Console.Clear();
+            con.mostrarAlumnos();
+
+            Console.WriteLine("Presione una tecla para continuar....");
+            Console.ReadKey();        
+
+
+
+        }
         public static string mostrarMenu(){
 
             string opcion;
@@ -186,6 +205,7 @@ namespace libreria
             Console.WriteLine("3.- Buscar Alumno");
             Console.WriteLine("4.- Exportar Alumnos a BD");
             Console.WriteLine("5.- Contar la cantidad de....");
+            Console.WriteLine("6.- Mostrar Alumnos de BD");
 
             
 

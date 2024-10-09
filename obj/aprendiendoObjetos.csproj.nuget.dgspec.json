@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/100924/objetoPersona/aprendiendoObjetos.csproj": {}
+    "/home/et12alumno/08102024/objetoPersona/aprendiendoObjetos.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/100924/objetoPersona/aprendiendoObjetos.csproj": {
+    "/home/et12alumno/08102024/objetoPersona/aprendiendoObjetos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/100924/objetoPersona/aprendiendoObjetos.csproj",
+        "projectUniqueName": "/home/et12alumno/08102024/objetoPersona/aprendiendoObjetos.csproj",
         "projectName": "aprendiendoObjetos",
-        "projectPath": "/home/et12alumno/100924/objetoPersona/aprendiendoObjetos.csproj",
+        "projectPath": "/home/et12alumno/08102024/objetoPersona/aprendiendoObjetos.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/100924/objetoPersona/obj/",
+        "outputPath": "/home/et12alumno/08102024/objetoPersona/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
