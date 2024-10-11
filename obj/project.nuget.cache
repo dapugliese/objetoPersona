@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XDTw8G+FBReTt00e+QnT4I2mXxkU2Icw01nkzL68k1452BafEntBzAsZ0ffxWvrz8thXknJWKEmWhOEazr+PiA==",
+  "dgSpecHash": "yyPwF+cN6gG/U11iR9vcoSYeuN48ctZfBrgFrZQuR+SjB2ZaIV3CehvD4czg84GGZjluk2TDTkd6TiNSSF+Frg==",
   "success": true,
-  "projectFilePath": "/home/et12alumno/08102024/objetoPersona/aprendiendoObjetos.csproj",
+  "projectFilePath": "/home/et12alumno/10102024/objetoPersona/aprendiendoObjetos.csproj",
   "expectedPackageFiles": [
     "/home/et12alumno/.nuget/packages/bouncycastle.cryptography/2.3.1/bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "/home/et12alumno/.nuget/packages/google.protobuf/3.26.1/google.protobuf.3.26.1.nupkg.sha512",
