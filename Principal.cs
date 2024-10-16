@@ -43,6 +43,9 @@ namespace libreria
                                 mostrarAlumnosBD();
                                 break;
 
+                            case "7":
+                                eliminarAlumnosBD();
+                                break;
 
                             default:
                                 Console.WriteLine("Opción Incorrecta...");
@@ -134,10 +137,6 @@ namespace libreria
                     Console.WriteLine("Registro No Encontrado");
                     Console.ReadKey();
                 }
-                
-
-
-
 
     }
 
@@ -190,6 +189,23 @@ namespace libreria
 
 
         }
+     
+    public static void eliminarAlumnosBD(){
+                int dni;
+                int flag=0;
+                Console.Clear();
+                Console.Write("Ingrese DNI Persona a Eliminar: ");
+                dni = Convert.ToInt32(Console.ReadLine());
+
+                conexionBD con  = new conexionBD();
+                con.conectar();
+
+            con.eliminarAlumnos(dni);
+
+            Console.WriteLine("Registros Eliminados. Presione una tecla para continuar....");
+            Console.ReadKey();   
+
+    }     
         public static string mostrarMenu(){
 
             string opcion;
@@ -206,6 +222,7 @@ namespace libreria
             Console.WriteLine("4.- Exportar Alumnos a BD");
             Console.WriteLine("5.- Contar la cantidad de....");
             Console.WriteLine("6.- Mostrar Alumnos de BD");
+            Console.WriteLine("7.- Eliminar Alumnos de BD");
 
             
 

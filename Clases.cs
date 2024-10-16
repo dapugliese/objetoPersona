@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using System.Configuration;
 using System.Data;
 
 namespace libreriaClase{
@@ -127,10 +128,51 @@ namespace libreriaClase{
                 //Console.WriteLine(datos[0]+" -- "+datos[1]);
             }
             datos.Close();
+        }
 
+        public void eliminarAlumnos(int rdni){
+
+            //string sql = "select DNI, Apellido, Nombre from Persona where Apellido = 'Sanchez'";
+            string sql = "select * from Persona where DNI = '" + rdni +"'";
+            List<int> idsPersona = new List<int>();
+
+            Comando.CommandText = sql;
+            Conector.Open();
+            MySqlDataReader  datos =  Comando.ExecuteReader();
             
 
+            while (datos.Read()){
 
-        }
+                        Console.Write("Apellido: ");
+                        Console.WriteLine(datos[2]);
+                        Console.Write("Nombre: ");
+                        Console.WriteLine(datos[3]);
+                        Console.Write("DNI:");
+                        Console.WriteLine(datos[1]);
+                        Console.Write("Fecha Nacimiento:");
+                        Console.WriteLine(datos[4]);
+                        Console.WriteLine("----------------");
+
+                        idsPersona.Add(Convert.ToInt32(datos[0]));
+                
+                //Console.WriteLine(datos[0]+" -- "+datos[1]);
+            }
+
+
+            datos.Close();
+
+            foreach(var elem in idsPersona){
+
+
+                Comando.CommandText = "delete from Persona where idPersona =  '" + elem +"'";
+
+                Comando.CommandType = CommandType.Text;
+                
+                Comando.ExecuteNonQuery();    
+                
+
+            }
+
+        }        
     }
 }
